@@ -15,32 +15,40 @@
 
 @implementation BirdsDetailViewController
 
-@synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
+@synthesize birdNameLabel, sighting, locationLabel, dateLabel;
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setSighting:(BirdSighting *) newSighting
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
+  if (sighting != newSighting) {
+    sighting = newSighting;
+    
+    // Update the view.
+    [self configureView];
 
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }        
+  }
 }
 
-- (void)configureView
+-(void) configureView
 {
     // Update the user interface for the detail item.
-
-  if (self.detailItem) {
-      self.detailDescriptionLabel.text = [self.detailItem description];
+  // Update the user interface for the detail item.
+  BirdSighting *theSighting = self.sighting;
+  
+  static NSDateFormatter *formatter = nil;
+  if (formatter == nil) {
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+  }
+  if (theSighting) {
+    self.birdNameLabel.text = theSighting.name;
+    self.locationLabel.text = theSighting.location;
+    self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSighting.date];
   }
 }
 

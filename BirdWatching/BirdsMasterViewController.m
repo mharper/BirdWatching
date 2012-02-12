@@ -7,7 +7,6 @@
 //
 
 #import "BirdsMasterViewController.h"
-
 #import "BirdsDetailViewController.h"
 
 @implementation BirdsMasterViewController
@@ -36,8 +35,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-  self.detailViewController = (BirdsDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    self.detailViewController = (BirdsDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
       [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
   }
 }
@@ -76,6 +75,13 @@
       return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
   } else {
       return YES;
+  }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    self.detailViewController.sighting = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
   }
 }
 
@@ -136,6 +142,14 @@
   [[cell textLabel] setText:sightingAtIndex.name];
   [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *)sightingAtIndex.date]];
   return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([[segue identifier] isEqualToString:@"ShowSightingDetails"]) {
+    BirdsDetailViewController *detailViewController = [segue destinationViewController];
+    
+    detailViewController.sighting = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+  }
 }
 
 @end
