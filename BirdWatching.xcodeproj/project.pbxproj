@@ -17,6 +17,8 @@
 		D833D99A14E85CC80083D66D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D833D99814E85CC80083D66D /* MainStoryboard_iPad.storyboard */; };
 		D833D99D14E85CC80083D66D /* BirdsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D99C14E85CC80083D66D /* BirdsMasterViewController.m */; };
 		D833D9A014E85CC80083D66D /* BirdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D99F14E85CC80083D66D /* BirdsDetailViewController.m */; };
+		D833D9A814E8611C0083D66D /* BirdSighting.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D9A714E8611C0083D66D /* BirdSighting.m */; };
+		D833D9AB14E862870083D66D /* BirdSightingDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D9AA14E862870083D66D /* BirdSightingDataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,18 +26,22 @@
 		D833D98314E85CC70083D66D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D833D98514E85CC70083D66D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D833D98714E85CC70083D66D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D833D98B14E85CC70083D66D /* BirdWatching-Info.plist */ = {isa = PBXFileReference; path = "BirdWatching-Info.plist"; sourceTree = "<group>"; };
+		D833D98B14E85CC70083D66D /* BirdWatching-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BirdWatching-Info.plist"; sourceTree = "<group>"; };
 		D833D98D14E85CC80083D66D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D833D98F14E85CC80083D66D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D833D99114E85CC80083D66D /* BirdWatching-Prefix.pch */ = {isa = PBXFileReference; path = "BirdWatching-Prefix.pch"; sourceTree = "<group>"; };
-		D833D99214E85CC80083D66D /* BirdsAppDelegate.h */ = {isa = PBXFileReference; path = BirdsAppDelegate.h; sourceTree = "<group>"; };
+		D833D99114E85CC80083D66D /* BirdWatching-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BirdWatching-Prefix.pch"; sourceTree = "<group>"; };
+		D833D99214E85CC80083D66D /* BirdsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdsAppDelegate.h; sourceTree = "<group>"; };
 		D833D99314E85CC80083D66D /* BirdsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdsAppDelegate.m; sourceTree = "<group>"; };
 		D833D99614E85CC80083D66D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D833D99914E85CC80083D66D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		D833D99B14E85CC80083D66D /* BirdsMasterViewController.h */ = {isa = PBXFileReference; path = BirdsMasterViewController.h; sourceTree = "<group>"; };
+		D833D99B14E85CC80083D66D /* BirdsMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdsMasterViewController.h; sourceTree = "<group>"; };
 		D833D99C14E85CC80083D66D /* BirdsMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdsMasterViewController.m; sourceTree = "<group>"; };
-		D833D99E14E85CC80083D66D /* BirdsDetailViewController.h */ = {isa = PBXFileReference; path = BirdsDetailViewController.h; sourceTree = "<group>"; };
+		D833D99E14E85CC80083D66D /* BirdsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdsDetailViewController.h; sourceTree = "<group>"; };
 		D833D99F14E85CC80083D66D /* BirdsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdsDetailViewController.m; sourceTree = "<group>"; };
+		D833D9A614E8611C0083D66D /* BirdSighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSighting.h; sourceTree = "<group>"; };
+		D833D9A714E8611C0083D66D /* BirdSighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSighting.m; sourceTree = "<group>"; };
+		D833D9A914E862870083D66D /* BirdSightingDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSightingDataController.h; sourceTree = "<group>"; };
+		D833D9AA14E862870083D66D /* BirdSightingDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSightingDataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,10 @@
 				D833D99E14E85CC80083D66D /* BirdsDetailViewController.h */,
 				D833D99F14E85CC80083D66D /* BirdsDetailViewController.m */,
 				D833D98A14E85CC70083D66D /* Supporting Files */,
+				D833D9A614E8611C0083D66D /* BirdSighting.h */,
+				D833D9A714E8611C0083D66D /* BirdSighting.m */,
+				D833D9A914E862870083D66D /* BirdSightingDataController.h */,
+				D833D9AA14E862870083D66D /* BirdSightingDataController.m */,
 			);
 			path = BirdWatching;
 			sourceTree = "<group>";
@@ -174,6 +184,8 @@
 				D833D99414E85CC80083D66D /* BirdsAppDelegate.m in Sources */,
 				D833D99D14E85CC80083D66D /* BirdsMasterViewController.m in Sources */,
 				D833D9A014E85CC80083D66D /* BirdsDetailViewController.m in Sources */,
+				D833D9A814E8611C0083D66D /* BirdSighting.m in Sources */,
+				D833D9AB14E862870083D66D /* BirdSightingDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 @implementation BirdsMasterViewController
 
 @synthesize detailViewController = _detailViewController;
+@synthesize dataController;
 
 - (void)awakeFromNib
 {
@@ -115,5 +116,26 @@
     return YES;
 }
 */
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return [self.dataController countOfList];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *__strong)indexPath {
+  
+  static NSString *CellIdentifier = @"BirdSightingCell";
+  
+  static NSDateFormatter *formatter = nil;
+  if (formatter == nil) {
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+  }
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  
+  BirdSighting *sightingAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+  [[cell textLabel] setText:sightingAtIndex.name];
+  [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *)sightingAtIndex.date]];
+  return cell;
+}
 
 @end

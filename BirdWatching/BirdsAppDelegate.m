@@ -7,6 +7,8 @@
 //
 
 #import "BirdsAppDelegate.h"
+#import "BirdSightingDataController.h"
+#import "BirdsMasterViewController.h"
 
 @implementation BirdsAppDelegate
 
@@ -14,12 +16,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-      UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-      UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-      splitViewController.delegate = (id)navigationController.topViewController;
+  UINavigationController *navigationController;
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    navigationController = (UINavigationController *) self.window.rootViewController;
   }
+  
+  else {
+      UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+      UINavigationController *detailNavigationController = [splitViewController.viewControllers lastObject];
+      splitViewController.delegate = (id)detailNavigationController.topViewController;
+      navigationController = [splitViewController.viewControllers objectAtIndex:0];
+  }
+  BirdsMasterViewController *firstViewController = (BirdsMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
+  BirdSightingDataController *aDataController = [[BirdSightingDataController alloc] init];
+  firstViewController.dataController = aDataController;
     return YES;
 }
 							
