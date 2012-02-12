@@ -77,10 +77,106 @@
                             <outlet property="delegate" destination="19" id="21"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bird Sightings" id="39"/>
+                    <navigationItem key="navigationItem" title="Bird Sightings" id="39">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kEQ-F1-GxC">
+                            <connections>
+                                <segue destination="QLN-YF-7V1" kind="modal" identifier="ShowAddSightingView" id="3s1-wQ-NRE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="843" y="-179"/>
+        </scene>
+        <scene sceneID="8FV-eD-fuQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYo-9b-I7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="vuB-eE-IgZ" customClass="AddSightingViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vhG-Xh-kwh">
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <sections>
+                            <tableViewSection id="M1E-9V-lsI">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wr2-7R-bLR">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bird Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="qX5-kf-yAN">
+                                                    <rect key="frame" x="124" y="11" width="81" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="j0w-C6-s3N">
+                                                    <rect key="frame" x="413" y="7" width="175" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kg9-IC-PIB">
+                                        <rect key="frame" x="0.0" y="44" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Zb0-yG-BjU">
+                                                    <rect key="frame" x="413" y="6" width="175" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" lineBreakMode="tailTruncation" minimumFontSize="10" id="J3c-e1-V4p">
+                                                    <rect key="frame" x="124" y="9" width="81" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="vuB-eE-IgZ" id="Kzr-s1-KH5"/>
+                            <outlet property="delegate" destination="vuB-eE-IgZ" id="TWL-GN-rof"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="V6V-1T-c6c">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="Grj-Oi-CnN">
+                            <connections>
+                                <action selector="cancel:" destination="vuB-eE-IgZ" id="DCE-gs-oHL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="wbD-Dd-JXc">
+                            <connections>
+                                <action selector="done:" destination="vuB-eE-IgZ" id="AO0-xP-QV6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="birdNameInput" destination="j0w-C6-s3N" id="uy7-y4-KeA"/>
+                        <outlet property="locationInput" destination="Zb0-yG-BjU" id="9LI-zs-Qgs"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="2514" y="-283"/>
         </scene>
         <scene sceneID="50">
             <objects>
@@ -204,8 +300,34 @@
             </objects>
             <point key="canvasLocation" x="432" y="686"/>
         </scene>
+        <scene sceneID="9CV-EV-VrN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6h-xr-iKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="QLN-YF-7V1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fsQ-eT-cuI">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vuB-eE-IgZ" kind="relationship" relationship="rootViewController" id="BIi-8t-yQ4"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1352" y="-283"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="AddSightingViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSightingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="outlet" name="birdNameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="locationInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="BirdsDetailViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdsDetailViewController.h"/>
             <relationships>

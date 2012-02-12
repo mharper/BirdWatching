@@ -19,6 +19,7 @@
 		D833D9A014E85CC80083D66D /* BirdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D99F14E85CC80083D66D /* BirdsDetailViewController.m */; };
 		D833D9A814E8611C0083D66D /* BirdSighting.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D9A714E8611C0083D66D /* BirdSighting.m */; };
 		D833D9AB14E862870083D66D /* BirdSightingDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D9AA14E862870083D66D /* BirdSightingDataController.m */; };
+		D833D9B114E87F2D0083D66D /* AddSightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D9B014E87F2C0083D66D /* AddSightingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		D833D9A714E8611C0083D66D /* BirdSighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSighting.m; sourceTree = "<group>"; };
 		D833D9A914E862870083D66D /* BirdSightingDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSightingDataController.h; sourceTree = "<group>"; };
 		D833D9AA14E862870083D66D /* BirdSightingDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSightingDataController.m; sourceTree = "<group>"; };
+		D833D9AF14E87F2C0083D66D /* AddSightingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSightingViewController.h; sourceTree = "<group>"; };
+		D833D9B014E87F2C0083D66D /* AddSightingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSightingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				D833D9A714E8611C0083D66D /* BirdSighting.m */,
 				D833D9A914E862870083D66D /* BirdSightingDataController.h */,
 				D833D9AA14E862870083D66D /* BirdSightingDataController.m */,
+				D833D9AF14E87F2C0083D66D /* AddSightingViewController.h */,
+				D833D9B014E87F2C0083D66D /* AddSightingViewController.m */,
 			);
 			path = BirdWatching;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				D833D9A014E85CC80083D66D /* BirdsDetailViewController.m in Sources */,
 				D833D9A814E8611C0083D66D /* BirdSighting.m in Sources */,
 				D833D9AB14E862870083D66D /* BirdSightingDataController.m in Sources */,
+				D833D9B114E87F2D0083D66D /* AddSightingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
