@@ -20,6 +20,7 @@
 		D833D9A814E8611C0083D66D /* BirdSighting.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D9A714E8611C0083D66D /* BirdSighting.m */; };
 		D833D9AB14E862870083D66D /* BirdSightingDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D9AA14E862870083D66D /* BirdSightingDataController.m */; };
 		D833D9B114E87F2D0083D66D /* AddSightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D833D9B014E87F2C0083D66D /* AddSightingViewController.m */; };
+		D833D9B314E889480083D66D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D833D9B214E889480083D66D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		D833D9AA14E862870083D66D /* BirdSightingDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSightingDataController.m; sourceTree = "<group>"; };
 		D833D9AF14E87F2C0083D66D /* AddSightingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSightingViewController.h; sourceTree = "<group>"; };
 		D833D9B014E87F2C0083D66D /* AddSightingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSightingViewController.m; sourceTree = "<group>"; };
+		D833D9B214E889480083D66D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		D833D97414E85CC70083D66D = {
 			isa = PBXGroup;
 			children = (
+				D833D9B214E889480083D66D /* README.md */,
 				D833D98914E85CC70083D66D /* BirdWatching */,
 				D833D98214E85CC70083D66D /* Frameworks */,
 				D833D98014E85CC70083D66D /* Products */,
@@ -175,6 +178,7 @@
 				D833D98E14E85CC80083D66D /* InfoPlist.strings in Resources */,
 				D833D99714E85CC80083D66D /* MainStoryboard_iPhone.storyboard in Resources */,
 				D833D99A14E85CC80083D66D /* MainStoryboard_iPad.storyboard in Resources */,
+				D833D9B314E889480083D66D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
